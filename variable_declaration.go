@@ -10,5 +10,5 @@ func main() {
 	var rollNumber int = 223
 	var student bool = true
 	var percentage float64 = 82.8
-	fmt.Println(name, rollNumber, student, percentage)
+	fmt.Println(name, surname, rollNumber, student, percentage)
 }
