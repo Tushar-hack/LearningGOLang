@@ -57,7 +57,7 @@ func main() {
 	i := 2
 	fmt.Println(new_Arr)
 	firstSlice := new_Arr[:i]
-	secondSlice := new_Arr[:i+1]
+	secondSlice := new_Arr[i+1:]
 	third_slice := append(firstSlice, secondSlice...)
 	fmt.Println(third_slice)
 
