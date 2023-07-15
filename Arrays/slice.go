@@ -51,4 +51,29 @@ func main() {
 	// Appending slice to a slice
 	new_slice := append(sub_slice, slice_1...)
 	fmt.Println(new_slice)
+
+	// deleting from a slice
+	new_Arr := [5]int{10, 20, 30, 40, 50}
+	i := 2
+	fmt.Println(new_Arr)
+	firstSlice := new_Arr[:i]
+	secondSlice := new_Arr[:i+1]
+	third_slice := append(firstSlice, secondSlice...)
+	fmt.Println(third_slice)
+
+	//Copying from a slice
+	src_slice := []int{10, 20, 30, 40, 50}
+	dest_slice := make([]int, 3)
+	num := copy(dest_slice, src_slice)
+	fmt.Println(dest_slice)
+	fmt.Println("Numbers of element copied: ", num)
+
+	// looping through a slice
+	for index, value := range src_slice {
+		fmt.Println(index, "=> ", value)
+	}
+
+	for _, value := range src_slice {
+		fmt.Println(value)
+	}
 }
